@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/outer_layout"
+    android:layout_height="400dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="* Choose Feature based on priority."
+        android:textAlignment="center"
+        android:textColor="@color/DarkViolet"
+        android:id="@+id/map_heading"
+        />
+
+    <ScrollView android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/map_heading"
+        android:id="@+id/scroller">
+        <RelativeLayout android:layout_width="match_parent"
+            android:orientation="vertical"
+
+            android:layout_height="280dp">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="High speed internet"
+                android:id="@+id/cb_High_speed_internet" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video Conferencing"
+                android:id="@+id/cb_Video_Conf"
+                android:layout_below="@+id/cb_High_speed_internet"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WiFi Internet"
+                android:id="@+id/cb_WiFi_Internet"
+                android:layout_below="@+id/cb_Video_Conf"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scanner and Printer"
+                android:id="@+id/cb_Scanner_Printer"
+                android:layout_below="@+id/cb_WiFi_Internet"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer"
+                android:id="@+id/cb_Computer"
+                android:layout_below="@+id/cb_Scanner_Printer"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receptionist"
+                android:id="@+id/cb_Receptionist"
+                android:layout_below="@+id/cb_Computer"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Board Room"
+                android:id="@+id/cb_Board_Room"
+                android:layout_below="@+id/cb_Receptionist"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messenger"
+                android:id="@+id/cb_Messenger"
+                android:layout_below="@+id/cb_Board_Room"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Underground Parking"
+                android:id="@+id/cb_Underground_Parking"
+                android:layout_below="@+id/cb_Messenger"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot Shower"
+                android:id="@+id/cb_Hot_Shower"
+                android:layout_below="@+id/cb_Underground_Parking"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lounge"
+                android:id="@+id/cb_Lounge"
+                android:layout_below="@+id/cb_Hot_Shower"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Private workspace"
+                android:id="@+id/cb_Private_work_space"
+                android:layout_below="@+id/cb_Lounge"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shared work space"
+                android:id="@+id/cb_Shared_work_space"
+                android:layout_below="@+id/cb_Private_work_space"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hourly Rate"
+                android:id="@+id/cb_Cost_Hourly_Rate"
+                android:layout_below="@+id/cb_Shared_work_space"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:clickable="false"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:id="@+id/list_importance_HighSpeed"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_High_speed_internet"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_VideoConf"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Video_Conf"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_Wifi"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_WiFi_Internet"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_ScannerPrinter"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Scanner_Printer"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_Computer"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Computer"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_Receptionist"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Receptionist"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_BoardRoom"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Board_Room"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_Messenger"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Messenger"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_UndergroudParking"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Underground_Parking"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_HotShower"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Hot_Shower"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_Lounge"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Lounge"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_PrivateWorkSpace"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Private_work_space"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_SharedWorkspace"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Shared_work_space"
+                android:layout_toRightOf="@+id/cb_Underground_Parking"
+                android:layout_toEndOf="@+id/cb_Underground_Parking" />
+
+            <Spinner
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hourlyRating"
+                android:entries="@array/money_range"
+                android:layout_alignBottom="@+id/cb_Cost_Hourly_Rate"
+                android:layout_toRightOf="@+id/cb_Cost_Hourly_Rate"
+                android:layout_toEndOf="@+id/cb_Cost_Hourly_Rate" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_importance_CostHourly"
+                android:entries="@array/item_importance"
+                android:layout_alignBottom="@+id/cb_Cost_Hourly_Rate"
+                android:layout_toRightOf="@+id/hourlyRating"
+                android:layout_toEndOf="@+id/hourlyRating" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_HighSpeed"
+                android:popupBackground="@color/Black"
+                android:entries="@array/item_priority"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_HighSpeed"
+                android:layout_toRightOf="@+id/list_importance_HighSpeed"
+                android:layout_toEndOf="@+id/list_importance_HighSpeed" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_VideoConf"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:entries="@array/item_priority"
+                android:layout_alignBottom="@+id/list_importance_VideoConf"
+                android:layout_toRightOf="@+id/list_importance_VideoConf"
+                android:layout_toEndOf="@+id/list_importance_VideoConf" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_WIFI"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:entries="@array/item_priority"
+                android:layout_alignBottom="@+id/list_importance_Wifi"
+                android:layout_toRightOf="@+id/list_importance_Wifi"
+                android:layout_toEndOf="@+id/list_importance_Wifi" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_ScannerPrinter"
+                android:popupBackground="@color/Black"
+                android:entries="@array/item_priority"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_ScannerPrinter"
+                android:layout_toRightOf="@+id/list_importance_ScannerPrinter"
+                android:layout_toEndOf="@+id/list_importance_ScannerPrinter" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_Computer"
+                android:popupBackground="@color/Black"
+                android:entries="@array/item_priority"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_Computer"
+                android:layout_toRightOf="@+id/list_importance_Computer"
+                android:layout_toEndOf="@+id/list_importance_Computer" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_Receptionist"
+                android:popupBackground="@color/Black"
+                android:entries="@array/item_priority"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_Receptionist"
+                android:layout_toRightOf="@+id/list_importance_Receptionist"
+                android:layout_toEndOf="@+id/list_importance_Receptionist" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_BoardRoom"
+                android:popupBackground="@color/Black"
+                android:entries="@array/item_priority"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_BoardRoom"
+                android:layout_toRightOf="@+id/list_importance_BoardRoom"
+                android:layout_toEndOf="@+id/list_importance_BoardRoom" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_Messenger"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:entries="@array/item_priority"
+                android:layout_alignBottom="@+id/list_importance_Messenger"
+                android:layout_toRightOf="@+id/list_importance_Messenger"
+                android:layout_toEndOf="@+id/list_importance_Messenger" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_UndergroundParking"
+                android:entries="@array/item_priority"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_UndergroudParking"
+                android:layout_toRightOf="@+id/list_importance_UndergroudParking"
+                android:layout_toEndOf="@+id/list_importance_UndergroudParking" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_HotShower"
+                android:popupBackground="@color/Black"
+                android:entries="@array/item_priority"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_HotShower"
+                android:layout_toRightOf="@+id/list_importance_HotShower"
+                android:layout_toEndOf="@+id/list_importance_HotShower" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_Lounge"
+                android:entries="@array/item_priority"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_Lounge"
+                android:layout_toRightOf="@+id/list_importance_Lounge"
+                android:layout_toEndOf="@+id/list_importance_Lounge" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_PrivateWorkspace"
+                android:entries="@array/item_priority"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_PrivateWorkSpace"
+                android:layout_toRightOf="@+id/list_importance_PrivateWorkSpace"
+                android:layout_toEndOf="@+id/list_importance_PrivateWorkSpace" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_SharedWorkspace"
+                android:entries="@array/item_priority"
+                android:popupBackground="@color/Black"
+                android:background="@color/LightGrey"
+                android:layout_alignBottom="@+id/list_importance_SharedWorkspace"
+                android:layout_toRightOf="@+id/list_importance_SharedWorkspace"
+                android:layout_toEndOf="@+id/list_importance_SharedWorkspace" />
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listPriority_CostHourly"
+                android:background="@color/LightGrey"
+                android:entries="@array/item_priority"
+                android:popupBackground="@color/Black"
+                android:spinnerMode="dropdown"
+                android:layout_alignBottom="@+id/list_importance_CostHourly"
+                android:layout_toRightOf="@+id/list_importance_CostHourly"
+                android:layout_toEndOf="@+id/list_importance_CostHourly" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/btnRate"
+        android:layout_below="@+id/scroller"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

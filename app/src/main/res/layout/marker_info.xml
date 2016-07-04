@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/mapnearby_officename"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:textColor="#090909" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/mapnearby_address1"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/mapnearby_officename"
+        android:layout_alignLeft="@+id/mapnearby_officename"
+        android:layout_alignStart="@+id/mapnearby_officename"
+        android:textColor="#3d3a3a" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/mapnearby_distance"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/mapnearby_address1"
+        android:layout_alignLeft="@+id/mapnearby_address1"
+        android:layout_alignStart="@+id/mapnearby_address1"
+        android:textColor="#615f5f" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="YOU CLICKED ON YOUR CURRENT LOCATION : "
+        android:layout_marginTop="10dp"
+        android:id="@+id/mapnearby_MarksScored"
+        android:layout_below="@+id/mapnearby_distance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:id="@+id/mapnearby_AvailableServicesTitle"
+        android:layout_below="@+id/mapnearby_MarksScored" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/mapnearby_AvailableServices"
+        android:layout_below="@+id/mapnearby_AvailableServicesTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/mapnearby_MissingServicesTitle"
+        android:layout_below="@+id/mapnearby_AvailableServices"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+
+        android:id="@+id/mapnearby_MissingServices"
+        android:layout_below="@+id/mapnearby_MissingServicesTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="View Route"-->
+        <!--android:id="@+id/btnViewRoute"-->
+        <!--android:layout_below="@+id/mapnearby_MissingServices"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+</RelativeLayout>

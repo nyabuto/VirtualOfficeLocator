@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">VirtualOfficeLocator</string>
+    <string name="title_activity_home">Virtual-Office Application</string>
+    <string name="title_activity_near_offices">Near Offices</string>
+    <string-array name="item_importance">
+        <item>low</item>
+        <item>moderate</item>
+        <item>high</item>
+
+    </string-array>
+    <string-array name="item_priority">
+        <!--<item>1</item>-->
+        <!--<item>2</item>-->
+        <!--<item>3</item>-->
+        <!--<item>4</item>-->
+        <!--<item>5</item>-->
+        <!--<item>6</item>-->
+        <!--<item>7</item>-->
+        <!--<item>8</item>-->
+        <!--<item>9</item>-->
+        <!--<item>10</item>-->
+        <!--<item>11</item>-->
+        <!--<item>12</item>-->
+        <!--<item>13</item>-->
+        <item></item>
+        <!--<item>15</item>-->
+    </string-array>
+    <string-array name="money_range">
+        <item>0-50</item>
+        <item>51-100</item>
+        <item>101-200</item>
+        <item>201-300</item>
+        <item>301-400</item>
+        <item>401-500</item>
+        <item>501 and above</item>
+    </string-array>
+    <string name="title_activity_map">Virtual-Office Application</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
